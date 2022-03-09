@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> 
+        <h1>Programma, kas aprēķina 3 skaitļu summu</h1>
+         <p> <input type="text" id="sk1"></p>
+         <p><input type="text" id="sk2"></p>
+       <p> <input type="text" id="sk2"></p>
+       <p><button onclick="Saskaiti()">Saskaiti dotos skaitļus</button></p>
+
+    </p>
+    <p id= "atbilde" >
+
+    </p>
+<script>
+    function Saskaiti(){
+        let a, b, c;
+        a= Number(sk1.value);
+        document.getElementById("atbilde").innerHTML = "Te būs atbilde" + a 
+
+    }
+</script>
+</body>
+</html>
