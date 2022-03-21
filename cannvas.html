@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html>
+<head>
+<title>Rectangle example</title>
+</head>
 <body>
-
-<canvas id="myCanvas" width="500" height="500" style="border:1px solid #4b9ae4;">
-Your browser does not support the HTML canvas tag.
-</canvas>
-<script >
- function draw() {
-  var canvas = document.getElementById('canvas');
-  if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
-
-    ctx.fillRect(25, 25, 100, 100);
-    ctx.clearRect(45, 45, 60, 60);
-    ctx.strokeRect(50, 50, 50, 50);
-  }
+<canvas id="DemoCanvas" width="500" height="500"></canvas> 
+<script>
+var canvas = document.getElementById("DemoCanvas");
+if (canvas.getContext) 
+{
+ var ctx = canvas.getContext('2d');
+ ctx.fillStyle='green';    // color of fill
+ var y=20, h=200, w=200;
+for (var x = 20; x!=100; x=x+20)   
+ {
+   ctx.fillRect(x, y, h, w); 
+   ctx.clearRect(x+5, y+5, h-10, w-10); 
+   y=y+20;   
+   h=h-40;
+   w=w-40;   
+  }  
 }
-
-
 </script>
-</body>
+</body> 
 </html>
