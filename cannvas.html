@@ -10,15 +10,15 @@ var canvas = document.getElementById("DemoCanvas");
 if (canvas.getContext) 
 {
  var ctx = canvas.getContext('2d');
- ctx.fillStyle='green';    // color of fill
+ ctx.fillStyle='black';    // color of fill
  var y=20, h=200, w=200;
 for (var x = 20; x!=100; x=x+20)   
  {
    ctx.fillRect(x, y, h, w); 
    ctx.clearRect(x+5, y+5, h-10, w-10); 
    y=y+20;   
-   h=h-40;
-   w=w-40;   
+   h=h-60;
+   w=w-60;   
   }  
 }
 </script>
