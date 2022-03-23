@@ -4,23 +4,35 @@
 <title>Rectangle example</title>
 </head>
 <body>
-<canvas id="DemoCanvas" width="500" height="500"></canvas> 
+<canvas id="DemoCanvas" width="700" height="700"></canvas> 
 <script>
 var canvas = document.getElementById("DemoCanvas");
-if (canvas.getContext) 
-{
+if (canvas.getContext) {
  var ctx = canvas.getContext('2d');
  ctx.fillStyle='black';    // color of fill
- var y=20, h=200, w=200;
-for (var x = 20; x!=100; x=x+20)   
- {
-   ctx.fillRect(x, y, h, w); 
-   ctx.clearRect(x+5, y+5, h-10, w-10); 
-   y=y+20;   
-   h=h-60;
-   w=w-60;   
-  }  
+
+ p = canvas.width;
+ m = 200
+ space = 20
+ l = 8
+ daudzums = p/(m+space) -1
+
+s=20 
+for(var r=0; r<5; r++){
+  ctx.rect(space+s*r,space+s*r,m-s*2*r,m-s*2*r);
+
+}
+
+//  ctx.rect(space,space,m,m);
+//  ctx.rect(space+20,space+20,m-20*2,m-20*2);
+//  ctx.rect(space+40,space+40,m-20*4,m-20*4);
+//  ctx.rect(space+60,space+60,m-20*6,m-20*6);
+//  ctx.rect(space+80,space+80,m-20*8,m-20*8);
+//  ctx.stroke();
 }
 </script>
-</body> 
+</body>
+</canvas>
+
+</body>
 </html>
