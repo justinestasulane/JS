@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>SimryCode</title>
+<meta charset="utf8"/>
+<style>
+body {
+    font-family: "Verdana";
+    font-size: 18px;
+    text-align: center;
+    background-color: rgb(193, 197, 253);
+}
+		</style>
+</head>
+<body>
+<h2>Raksti skaitli un izvadi to</h2>
+<p>Uzraksti skaitli: <input type="text" id="ievade"></p>
+<p><button id="poga" onclick="ievads()">Jau izdarīju</button></p>
+<p id = "info">.</p>
+<p1>Uzraksti savu vārdu: <input type="text" id="ievade1"></p1>
+<p1><button id="poga" onclick="ievads1()">Mani sauc</button></p1>
+<p1 id = "info1">.</p1>
+<script>
+function ievads(){
+	x = Number(ievade.value);
+ 	document.getElementById("info").innerHTML = x;
+}
+function ievads1(){
+	x =ievade1.value;
+ 	document.getElementById("info1").innerHTML = x;
+}
+		</script>
+</body>
+</html>

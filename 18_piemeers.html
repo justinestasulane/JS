@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SimryCode</title>
+<meta charset="utf8"/>
+<style>
+body {
+    font-family: "Verdana";
+    font-size: 16px;
+    text-align: center;
+    background-color: rgb(252, 169, 241);
+}
+		</style>
+</head>
+<body>
+<h1 style="color:blue;">This is a heading</h1>
+<p>Izvēlies krāsu: <input type="color" id="krasa"></p>
+<p> <button onclick="poga()">Izpildīt</button> </p>
+<p id="info">.</p>
+<script>
+function poga (){
+	k=krasa.value;
+  	document.getElementById("info").innerHTML = "Krāsas kods: " + k;
+    document.body.style.backgroundColor = k; // izmaina fona kraasu
+}
+function poga (){
+	k=krasa.value;
+  	document.getElementById("info").innerHTML = "Krāsas kods: " + k;
+    document.body.style.backgroundColor = k; // izmaina fona kraasu
+}
+		</script>
+</body>
+</html>
