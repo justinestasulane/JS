@@ -1,27 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Piemērs</title>
-<meta charset="utf8"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
 <style>
-body {
-    font-family: "Verdana";
-    font-size: 14px;
-}
-		</style>
+    body {
+        font-family: "Verdana";
+        font-size: 16px;
+    }
+</style>
 </head>
 <body>
-<h2>Zīmēšana</h2>
-<canvas id="pamatne"
-    width="200"
-    height="200"
-    style="border:1px solid rgb(78, 34, 34); background-color: LightGray">
+<!-- 1) ievietot html formas elementus, kuri ļauj ierakstīt
+     taisnstūra platumu un augstumu, -->
+<h1> Kvadrāts  </h1>
+<canvas id="vieta" width="800" height=800"  
+        style="border:4px solid #e9a2ff; 
+        background-color:rgb(255, 255, 255)">
 </canvas>
-<br>
+<p>
+    <button type="button" onclick="darbs()">Gribu redzēt</button>
+    </p>
+    <br>
 Līnijas krāsa: <input type="color" id="krasa" value="#0000FF"><br>
+
 Aizpildījuma krāsa: <input type="color" id="krasa2" value="#00FF00"><br>
-Rādiuss: <input type="text" id="radiuss" value="80"><br>
+
+Malas platums: <input type="text" id="platums" value="80"><br>
+Augstums: <input type="text" id="augstums" value="80"><br>
+
 Vai zīmēt aizpildītu? <input type="checkbox" id="aizkrasots"><br>
+
 <button type="button" onclick="poga()">Zīmēt</button>
 <script>
 function poga(){
@@ -32,7 +44,7 @@ function poga(){
   	zim.clearRect(0,0,pam.width,pam.height);
   	zim.stroke();
   // vērtību nolasīšana no izvēlēm
-  	var r=radiuss.value;
+  	var g=garums.value;
 	var p=aizkrasots.checked;
   	var k=krasa.value;
   	var k2=krasa2.value;
@@ -58,6 +70,6 @@ function poga(){
  	zim.fill();
   zim.stroke();
 }
-		</script>
+</script>		
 </body>
 </html>
