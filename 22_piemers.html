@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Piemērs</title>
+<meta charset="utf8"/>
+<style>
+
+		</style>
+</head>
+<body>
+<p>Kvadrāts </p>
+<canvas id="vieta" width="300" height="200"  style="background-color:lightblue"> </canvas>
+<p>
+<button type="button" onclick="darbs()">Zīmēt</button>
+</p>
+<script>
+var pamatne = document.getElementById("vieta");
+var zimejums = pamatne.getContext("2d");
+
+function darbs() {
+zimejums.lineWidth="5";
+      zimejums.strokeStyle="yellow";
+      zimejums.strokeRect(100,100,80,80);
+
+      zimejums.fillStyle="violet";
+      zimejums.fillRect(30,40,30,150);
+	  zimejums.lineWidth="4";
+      zimejums.strokeStyle="green";
+	  zimejums.strokeRect(30,40,30,150);
+}
+		</script>
+</body>
+</html>

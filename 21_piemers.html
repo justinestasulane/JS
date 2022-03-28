@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Piemērs</title>
+<meta charset="utf8"/>
+<style>
+
+		</style>
+</head>
+<body>
+<p>Poga strādā? </p>
+<canvas id="vieta" width="300" height="300"  
+        style="border:4px solid #E62B2B; 
+        background-color:lightblue">
+</canvas>
+<p>
+<button type="button" onclick="darbs()">Zīmēt</button>
+</p>
+<p id="straadaa"></p>
+<p>
+<button type="button" onclick="nedarbs()">Attīrīt</button>
+</p>
+<script>
+var pamatne = document.getElementById("vieta");
+var zimejums = pamatne.getContext("2d");
+
+function darbs() {
+      zimejums.lineWidth="3";
+      zimejums.strokeStyle="#e339db";
+      zimejums.strokeRect(20,200,150,70);
+document.getElementById("straadaa").innerHTML = "Jā, viss strādā!";
+}
+
+function nedarbs() {
+  zimejums.clearRect(0,0,pamatne.width,pamatne.height);
+  document.getElementById("straadaa").innerHTML = "";
+}
+		</script>
+</body>
+</html>
