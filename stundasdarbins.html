@@ -17,13 +17,13 @@
 <!-- 1) ievietot html formas elementus, kuri ļauj ierakstīt
      taisnstūra platumu un augstumu, -->
 <h1> Kvadrāts  </h1>
-<canvas id="vieta" width="800" height=800"  
+<canvas id="vieta" width="500" height= "500"  
         style="border:4px solid #e9a2ff; 
         background-color:rgb(255, 255, 255)">
 </canvas>
-<p>
+<!-- <p>
     <button type="button" onclick="darbs()">Gribu redzēt</button>
-    </p>
+    </p> -->
     <br>
 Līnijas krāsa: <input type="color" id="krasa" value="#0000FF"><br>
 
@@ -33,41 +33,42 @@ Malas platums: <input type="text" id="platums" value="80"><br>
 Augstums: <input type="text" id="augstums" value="80"><br>
 
 Vai zīmēt aizpildītu? <input type="checkbox" id="aizkrasots"><br>
-
 <button type="button" onclick="poga()">Zīmēt</button>
+
 <script>
 function poga(){
-  	var pam=document.getElementById("pamatne");
+  var pam=document.getElementById("vieta");
 	var zim= pam.getContext("2d");
   // dzēš iepriekš uzzīmēto
   	zim.beginPath();
-  	zim.clearRect(0,0,pam.width,pam.height);
-  	zim.stroke();
+  	// zim.clearRect(0,0,pam.width,pam.height);
+  	// zim.stroke();
   // vērtību nolasīšana no izvēlēm
-  	var g=garums.value;
+  	var gar = augstums.value;
+    var plat = platums.value;
 	var p=aizkrasots.checked;
   	var k=krasa.value;
   	var k2=krasa2.value;
   
-    if (r>96){
-  		r=96;
-      radiuss.value=r;
-  	} 
+    // if (r>96){
+  	// 	r=96;
+    //   radiuss.value=r;
+  	// } 
   
-  	zim.beginPath();
-  	zim.strokeStyle=k;
-  	zim.lineWidth="5";
+  	// zim.beginPath();
+  	// zim.strokeStyle=k;
+  	// zim.lineWidth="5";
   
-  if(p){
-  	// aizkraasots
-    zim.fillStyle = k2;
-  	} else {
-  	// neaizkraasots
-    zim.fillStyle = "LightGray";
-  	}
+  // if(p){
+  // 	// aizkraasots
+  //   zim.fillStyle = k2;
+  // 	} else {
+  // 	// neaizkraasots
+  //   zim.fillStyle = "LightGray";
+  // 	}
  	
-	zim.arc(100,100,r,0,2*Math.PI);
- 	zim.fill();
+	zim.rect(100,100,plat,gar);
+ 	//zim.fill();
   zim.stroke();
 }
 </script>		
