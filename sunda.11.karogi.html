@@ -17,6 +17,7 @@
     <input type="radio" name="valstis" id="id"> Indonēzija <br>
     <input type="radio" name="valstis" id="jp"> Japāna <br>
     <input type="radio" name="valstis" id="lv"> Latvija <br>
+    <input type="radio" name="valstis" id="uk"> Ukraina <br>
     </p>
     <p> Izmērs</p>
     <p>
@@ -28,7 +29,7 @@
     <canvas id="Pamatne" width="250" height="170">
     </canvas>
     <p id="saraksts">.</p>
-    <script>
+    <script> 
     function karogs (valsts, lielums){
         var pam = Pamatne;
         var zimejums = pam.getContext("2d");
@@ -59,24 +60,34 @@
             zimejums.fill();
         }
         if (v == "lv")  {
-            zimejums.beginPath();
-            zimejums.fillStyle = "rgb(161, 40, 48) ";
-            zimejums.fillRect(0, 0, 250 * k, 84 * k);
+           zimejums.beginPath();
+            zimejums.fillStyle = "rgb(158, 27, 52)";
+            zimejums.fillRect(0, 0, 250 * k, 60 * k);
             zimejums.fillStyle = "white";
+            zimejums.fillRect(0, 50 * k, 250 * k, 40 * k);
+            zimejums.fillStyle = "rgb(158, 27, 52)";
+            zimejums.fillRect(0, 80 * k, 250 * k, 60 * k);
+       }
+        if (v == "uk")  {
+            zimejums.beginPath();
+            zimejums.fillStyle = "rgb(0, 91, 188)";
+            zimejums.fillRect(0, 0, 250 * k, 84 * k);
+            zimejums.fillStyle = "	rgb(255, 214, 0)";
             zimejums.fillRect(0, 84 * k, 250 * k, 84 * k);
-      
-        
+        }
     }
     function poga (){
       var valsts, lielums = 0;
       if(bd.checked){valsts="bd";}
       if(id.checked){valsts="id";}
       if(jp.checked){valsts="jp";}
+      if(lv.checked){valsts="lv";}
+      if(uk.checked){valsts="uk";}
       if(l1.checked){lielums=1;}
       if(l2.checked){lielums=2;}
       if(l4.checked){lielums=4;} 
       karogs(valsts, lielums);
     }
-            </script>
-    
-    </body></html>
+    </script> 
+    </body>
+    </html>
