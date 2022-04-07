@@ -14,7 +14,7 @@ p = c.width;
 ctx.beginPath();
  
  m = 200
- space = 20
+ space = 20  
  l = 8
  daudzums = p/(m+space) -1
 
@@ -28,8 +28,24 @@ ctx.beginPath();
  }
 }
  ctx.stroke();
+ //lampiņa on un off JS
+ function light(sw) {
+  var pic;
+  if (sw == 0) {
+    pic = "pic_bulboff.gif"
+  } else {
+    pic = "pic_bulbon.gif"
+  }
+  document.getElementById('myImage').src = pic;
+}
 
 </script>
+<img id="myImage" src="pic_bulboff.gif" width="100" height="180">
+
+<p>
+<button type="button" onclick="light(1)">Light On</button>
+<button type="button" onclick="light(0)">Light Off</button>
+</p>
 </body>
 </canvas>
 
