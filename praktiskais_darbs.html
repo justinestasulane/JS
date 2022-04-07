@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Praktiskais darbs</title>
+    <title>Praktiskais darbs</title>
+    
 </head>
 <style>
     table, th, td {
       border:1px solid black;
     }
     h1   {color: rgb(124, 170, 240);}
+
        </style>
     
 <body>
 
+
 <h1>Praktiskais darbs</h1>
 <p style="color:Violet;">Praktiski strādājam</p>
 <p>Attēls</p>
+
 <img src = "1200005943.1000x668.jpg" alt= "Italian Trulli" >
 <a href="https://www.youtube.com/watch?v=d-diB65scQU" target="_blank">te ir saites teksts vai links</a> <br> 
 <a href="https://www.youtube.com/watch?v=ZbZSe6N_BXs" target="_blank">Noklausies!</a> 
@@ -41,6 +45,67 @@
     <li>Kafija</li>
     <li>Tēja </li>
     <li>Piens</li>
-  </ul>  
-</body>
-</html>
+  
+  </ul> 
+  <canvas id="canvas"></canvas>
+  <canvas id="canvas" ></canvas>
+  <h3>Lai top gaisma!</h3>
+  <script>
+
+function draw() {
+  var canvas = document.getElementById('canvas');
+  if (canvas.getContext) {
+     var ctx = canvas1.getContext('2d');
+    
+
+    ctx.beginPath();
+    ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // Outer circle
+    ctx.moveTo(110, 75);
+    ctx.arc(75, 75, 35, 0, Math.PI, false);  // Mouth (clockwise)
+    ctx.moveTo(65, 65);
+    ctx.arc(60, 65, 5, 0, Math.PI * 2, true);  // Left eye
+    ctx.moveTo(95, 65);
+    ctx.arc(90, 65, 5, 0, Math.PI * 2, true);  // Right eye
+    ctx.stroke();
+  }
+}
+
+
+var canvas=document.getElementById("canvas");
+var ctx=canvas.getContext("2d");
+
+ctx.beginPath();
+for(var i=0;i<50;i++){
+  var cx=Math.random()*canvas.width;
+  var cy=Math.random()*canvas.height;
+  ctx.moveTo(cx,cy);
+  ctx.arc(cx,cy,7,0,Math.PI*2);
+}
+ctx.fillStyle='red';
+ctx.fill();
+
+
+
+
+    function light(sw) {
+      var pic;
+      if (sw == 0) {
+        pic = "pic_bulboff.gif"
+      } else {
+        pic = "pic_bulbon.gif"
+      }
+      document.getElementById('myImage').src = pic;
+    }
+    </script>
+    
+    <img id="myImage" src="pic_bulboff.gif" width="100" height="180">
+    
+    <p>
+    <button type="button" onclick="light(1)">Light On</button>
+    <button type="button" onclick="light(0)">Light Off</button>
+    </p>
+    
+    </body>
+    </html>
+    
+    
