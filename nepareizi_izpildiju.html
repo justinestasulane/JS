@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darba uzdevums</title>
+    <h1>Uzdevums </h1>
+</head>
+<body>
+    <canvas id="vieta" width="600" height="600"  
+    style="border:4px solid #d3eea0; 
+    background-color:rgb(228, 173, 230)">
+</canvas>
+<p>
+<button type="button" onclick="kvadrāts()">Zīmēt kvadrātu</button>
+</p>
+<p>
+<button type="button" onclick="taisnstūris()">Zīmēt taisnstūri</button>
+    </p>
+<p id="straadaa"></p>
+<p>
+<button type="button" onclick="nedarbs()">Attīrīt</button>
+</p>
+<script>
+var pamatne = document.getElementById("vieta");
+var zimejums = pamatne.getContext("2d");
+
+function kvadrāts() {
+  zimejums.lineWidth="4";
+  zimejums.strokeStyle="#e339db";
+  zimejums.strokeRect(40,40,40,40);
+document.getElementById("straadaa").innerHTML = "Lūk, kvadrāts!";
+}
+function taisnstūris() {
+  zimejums.lineWidth="4";
+  zimejums.strokeStyle="#e339db";
+  zimejums.strokeRect(20,200,170,140);
+document.getElementById("straadaa").innerHTML = "Lūk, taisnstūris!";
+}
+
+function nedarbs() {
+zimejums.clearRect(0,0,pamatne.width,pamatne.height);
+document.getElementById("straadaa").innerHTML = "";
+}
+    </script>
+</body>
+</html>

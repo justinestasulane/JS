@@ -48,13 +48,14 @@
   
   </ul> 
   <canvas id="canvas"></canvas>
-  <canvas id="canvas" ></canvas>
+  <canvas id="myCanvas" width="200" height="100" style="border:1px solid #b179f1;">
+  </canvas>
   <h3>Lai top gaisma!</h3>
   <script>
 
 function draw() {
-  var canvas = document.getElementById('canvas');
-  if (canvas.getContext) {
+  var canvas1 = document.getElementById('myCanvas');
+  if (canvas1.getContext) {
      var ctx = canvas1.getContext('2d');
     
 
